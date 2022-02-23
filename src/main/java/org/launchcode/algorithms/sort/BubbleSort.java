@@ -3,13 +3,7 @@ package org.launchcode.algorithms.sort;
 /**
  * Created by Chris Bay
  */
-public class BubbleSort {
-
-    private static void swap(int[] items, int i, int j) {
-        int temp = items[i];
-        items[i] = items[j];
-        items[j] = temp;
-    }
+public class BubbleSort extends AbstractSort {
 
     public static void sort(int[] items) {
         bubbleToN(items, items.length);

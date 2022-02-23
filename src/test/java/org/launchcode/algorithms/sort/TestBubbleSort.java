@@ -1,5 +1,6 @@
+package org.launchcode.algorithms.sort;
+
 import org.junit.Test;
-import org.launchcode.algorithms.sort.BubbleSort;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertTrue;
@@ -7,14 +8,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by Chris Bay
  */
-public class TestBubbleSort {
-
-    private static boolean isSorted(int[] items) {
-        for (int i = 0; i < items.length-1; i++) {
-            if (items[i] > items[i+1]) return false;
-        }
-        return true;
-    }
+public class TestBubbleSort extends AbstractTest {
 
     @Test
     public void testBubbleSortDoesNotModifySortedArray() {
