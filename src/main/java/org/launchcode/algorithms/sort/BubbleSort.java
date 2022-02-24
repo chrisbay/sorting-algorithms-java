@@ -15,11 +15,15 @@ public class BubbleSort extends AbstractSort {
 
         if (n == 1) return;
 
+        int numSwaps = 0;
         for (int i = 0; i < n-1; i++) {
             if (items[i] > items[i+1]) {
                 swap(items, i, i+1);
+                numSwaps++;
             }
         }
+
+        if (numSwaps == 0) return;
 
         bubbleToN(items, n-1);
     }
