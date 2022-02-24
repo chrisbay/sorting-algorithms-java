@@ -1,18 +1,11 @@
 package org.launchcode.algorithms.sort;
 
+import static org.launchcode.algorithms.Utils.slice;
+
 /**
  * Created by Chris Bay
  */
 public class MergeSort {
-
-    static int[] slice(int[] arr, int start, int end) {
-        int sliceLen = end - start;
-        int[] sliced = new int[sliceLen];
-        for (int i = 0; i < sliceLen; i++) {
-            sliced[i] = arr[start + i];
-        }
-        return sliced;
-    }
 
     public static int[] sort(int[] items) {
 

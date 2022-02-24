@@ -3,6 +3,7 @@ package org.launchcode.algorithms.sort;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
+import static org.launchcode.algorithms.Utils.slice;
 
 /**
  * Created by Chris Bay
@@ -50,21 +51,21 @@ public class TestMergeSort extends AbstractTest {
     public void testSliceAtBeginning() {
         int[] items = {1, 2, 3, 4, 5};
         int[] slice = {1, 2, 3};
-        assertArrayEquals(slice, MergeSort.slice(items, 0, 3));
+        assertArrayEquals(slice, slice(items, 0, 3));
     }
 
     @Test
     public void testSliceAtEnd() {
         int[] items = {1, 2, 3, 4, 5};
         int[] slice = {3, 4, 5};
-        assertArrayEquals(slice, MergeSort.slice(items, 2, 5));
+        assertArrayEquals(slice, slice(items, 2, 5));
     }
 
     @Test
     public void testSliceInMiddle() {
         int[] items = {1, 2, 3, 4, 5};
         int[] slice = {2, 3, 4};
-        assertArrayEquals(slice, MergeSort.slice(items, 1, 4));
+        assertArrayEquals(slice, slice(items, 1, 4));
     }
 
     @Test
