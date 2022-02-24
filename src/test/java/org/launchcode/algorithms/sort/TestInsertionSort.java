@@ -11,7 +11,7 @@ import static org.junit.Assert.assertTrue;
 public class TestInsertionSort extends AbstractTest {
 
     @Test
-    public void testInsertionSortDoesNotModifySortedArray() {
+    public void testInsertionSortWithSortedArray() {
         int[] items = {1, 2, 3, 4, 5};
         int[] sorted = InsertionSort.sort(items);
         assertArrayEquals(items, sorted);
