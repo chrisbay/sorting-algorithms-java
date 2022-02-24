@@ -5,8 +5,10 @@ package org.launchcode.algorithms.sort;
  */
 public class BubbleSort extends AbstractSort {
 
-    public static void sort(int[] items) {
-        bubbleToN(items, items.length);
+    public static int[] sort(int[] items) {
+        int[] copy = items.clone();
+        bubbleToN(copy, copy.length);
+        return copy;
     }
 
     private static void bubbleToN(int[] items, int n) {

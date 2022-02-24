@@ -1,5 +1,6 @@
 package org.launchcode.algorithms.sort;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
@@ -8,43 +9,12 @@ import static org.launchcode.algorithms.Utils.slice;
 /**
  * Created by Chris Bay
  */
-public class TestMergeSort extends AbstractTest {
+public class TestMergeSort extends AbstractSortTest {
 
-    private final int[] expected = {1, 2, 3, 4, 5};
-
-    @Test
-    public void testMergeSortWithSortedArray() {
-        int[] items = {1, 2, 3, 4, 5};
-        int[] sorted = MergeSort.sort(items);
-        assertArrayEquals(items, sorted);
-    }
-
-    @Test
-    public void testMergeSortWithBackwardsArray() {
-        int[] items = {1, 2, 3, 4, 5};
-        int[] sorted = MergeSort.sort(items);
-        assertArrayEquals(expected, sorted);
-    }
-
-    @Test
-    public void testMergeSortWithMixedArray() {
-        int[] items = {2, 4, 3, 1, 5};
-        int[] sorted = MergeSort.sort(items);
-        assertArrayEquals(expected, sorted);
-    }
-
-    @Test
-    public void testMergeSortWithUnsortedItemAtEnd() {
-        int[] items = {2, 3, 4, 5, 1};
-        int[] sorted = MergeSort.sort(items);
-        assertArrayEquals(expected, sorted);
-    }
-
-    @Test
-    public void testMergeSortWithUnsortedItemAtBeginning() {
-        int[] items = {5, 1, 2, 3, 4};
-        int[] sorted = MergeSort.sort(items);
-        assertArrayEquals(expected, sorted);
+    @BeforeClass
+    public static void setUp() throws NoSuchMethodException {
+        Class<MergeSort> clazz = MergeSort.class;
+        algorithm = clazz.getMethod("sort", int[].class);
     }
 
     @Test
